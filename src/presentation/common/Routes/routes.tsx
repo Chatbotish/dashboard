@@ -1,8 +1,7 @@
 export const routes = {
-    INITIAL: "/",
-    DASHBOARD: "/dash",
-}
+  INITIAL: "/",
+  DASHBOARD: "/dash",
+};
 
 // Override initial route if necessary
-routes.DASHBOARD = routes.INITIAL
-
+routes.DASHBOARD = routes.INITIAL;

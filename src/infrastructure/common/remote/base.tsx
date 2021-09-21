@@ -3,7 +3,7 @@ import config from "../../../common/config";
 
 const baseURL = config.BASE_API;
 
-const base = async (options:Object) => {
+const base = async (options: Object) => {
   const response = await axios({
     baseURL,
     headers: {
@@ -15,7 +15,7 @@ const base = async (options:Object) => {
   return response.data;
 };
 
-export const get = (url:String, params:Object) => {
+export const get = (url: String, params: Object) => {
   const options = {
     method: "get",
     url,
@@ -24,7 +24,7 @@ export const get = (url:String, params:Object) => {
   return base(options);
 };
 
-export const patch = (url:String, data:Object) => {
+export const patch = (url: String, data: Object) => {
   const options = {
     method: "patch",
     url,
@@ -33,7 +33,7 @@ export const patch = (url:String, data:Object) => {
   return base(options);
 };
 
-export const post = (url:String, data:Object) => {
+export const post = (url: String, data: Object) => {
   const options = {
     method: "post",
     url,
@@ -42,7 +42,7 @@ export const post = (url:String, data:Object) => {
   return base(options);
 };
 
-export const put = (url:String, data:Object) => {
+export const put = (url: String, data: Object) => {
   const options = {
     method: "put",
     url,
@@ -51,7 +51,7 @@ export const put = (url:String, data:Object) => {
   return base(options);
 };
 
-export const del = (url:String, data:Object) => {
+export const del = (url: String, data: Object) => {
   const options = {
     method: "delete",
     url,

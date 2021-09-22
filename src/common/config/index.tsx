@@ -12,8 +12,8 @@ const ENV = getEnv();
 const local = {
   API_URL: "http://localhost:5000",
   CLIENT_URL: "http://localhost:3000",
-  AUTH0_DOMAIN: "dev-qlg7c9vz.us.auth0.com",
-  AUTH0_CLIENT_ID: "czQVb2eCU05djAnNy96MAh5Ki9JxKY2e",
+  AUTH0_DOMAIN: "dev-gf4oankn.us.auth0.com",
+  AUTH0_CLIENT_ID: "DMtfw1Fslh2zRegPlgcdQnZBQyzw0ZPv",
 };
 
 const development = {
@@ -32,9 +32,6 @@ const production = {
   ...staging,
 
   CLIENT_URL: "https://chatbotish-dash.vercel.app",
-
-  AUTH0_DOMAIN: "dev-qlg7c9vz.us.auth0.com",
-  AUTH0_CLIENT_ID: "CK0NoxdHj1K0QTrtI4pNjcoB0hJNbY1N",
 };
 
 const configs = { local, development, staging, production };

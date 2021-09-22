@@ -1,7 +1,7 @@
 import axios from "axios";
 import config from "../../../common/config";
 
-const baseURL = config.BASE_API;
+const baseURL = config.API_URL;
 
 const base = async (options: Object) => {
   const response = await axios({

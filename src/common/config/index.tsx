@@ -5,30 +5,34 @@
   3. production (yarn build)
 */
 
-const ENV = "development";
+import getEnv from "./getEnv";
 
-const development = {
-  BASE_API: "http://localhost:5000",
+const ENV = getEnv();
+
+const local = {
+  API_URL: "http://localhost:5000",
+  CLIENT_URL: "http://localhost:3000",
+  AUTH0_DOMAIN: "dev-qlg7c9vz.us.auth0.com",
+  AUTH0_CLIENT_ID: "czQVb2eCU05djAnNy96MAh5Ki9JxKY2e",
 };
 
-const production = {
-  ...development,
+const development = {
+  ...local,
+  CLIENT_URL: "https://chatbotish-dash-dev.vercel.app",
 };
 
 const staging = {
   ...development,
+  CLIENT_URL: "https://chatbotish-dash.vercel.app",
 };
 
-const local = {
-  ...development,
+const production = {
+  ...staging,
+  AUTH0_DOMAIN: "dev-qlg7c9vz.us.auth0.com",
+  AUTH0_CLIENT_ID: "CK0NoxdHj1K0QTrtI4pNjcoB0hJNbY1N",
 };
 
-const configs = {
-  production,
-  staging,
-  development,
-  local,
-};
+const configs = { local, development, staging, production };
 
 const currentConfig = configs[ENV];
 
@@ -36,7 +40,13 @@ const config = {
   // START: LOCAL CONFIG
   ENV: ENV,
 
-  BASE_API: currentConfig.BASE_API,
+  API_URL: currentConfig.API_URL,
+  CLIENT_URL: currentConfig.CLIENT_URL,
+
+  // START: Auth0 Config
+  AUTH0_DOMAIN: currentConfig.AUTH0_DOMAIN,
+  AUTH0_CLIENT_ID: currentConfig.AUTH0_CLIENT_ID,
+  // END: Auth0 Config
 };
 
 export default config;

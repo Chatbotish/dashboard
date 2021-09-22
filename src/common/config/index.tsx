@@ -18,16 +18,21 @@ const local = {
 
 const development = {
   ...local,
-  CLIENT_URL: "https://chatbotish-dash-dev.vercel.app",
+
+  CLIENT_URL: "https://chatbotish-dev.vercel.app",
 };
 
 const staging = {
   ...development,
-  CLIENT_URL: "https://chatbotish-dash.vercel.app",
+
+  CLIENT_URL: "https://chatbotish-staging.vercel.app",
 };
 
 const production = {
   ...staging,
+
+  CLIENT_URL: "https://chatbotish-dash.vercel.app",
+
   AUTH0_DOMAIN: "dev-qlg7c9vz.us.auth0.com",
   AUTH0_CLIENT_ID: "CK0NoxdHj1K0QTrtI4pNjcoB0hJNbY1N",
 };

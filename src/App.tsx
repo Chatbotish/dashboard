@@ -9,10 +9,7 @@ import {
 } from "./presentation/common/Routes";
 
 // Component imports
-import Home from "./presentation/Home";
-import Login from "./presentation/Login";
-import Initial from "./presentation/Initial";
-import Auth0 from "./presentation/Auth0";
+import { Auth0, Home, Initial, Login } from "./presentation";
 
 function App() {
   return (

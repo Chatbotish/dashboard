@@ -1,6 +1,8 @@
 export const routes = {
-  INITIAL: "/",
-  DASHBOARD: "/dash",
+  INITIAL: `/`,
+  LOGIN: `/login`,
+  HOME: `/home`,
+  DASHBOARD: `/dash`,
 };
 
 // Override initial route if necessary

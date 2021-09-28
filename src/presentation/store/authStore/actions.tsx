@@ -1,3 +1,5 @@
-const actions = {};
+const actions = {
+  handleGetAccessToken: () => async () => {},
+};
 
 export default actions;

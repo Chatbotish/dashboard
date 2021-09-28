@@ -1,13 +1,16 @@
 import axios from "axios";
 import config from "../../../common/config";
+import { getStorageItem } from "../local";
 
 const baseURL = config.API_URL;
 
 const base = async (options: Object) => {
+  const accessToken = await getStorageItem("accessToken");
   const response = await axios({
     baseURL,
     headers: {
       Accept: "application/json",
+      Authorization: ` Bearer ${accessToken}`,
     },
     ...options,
   });

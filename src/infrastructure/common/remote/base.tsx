@@ -10,7 +10,7 @@ const base = async (options: Object) => {
     baseURL,
     headers: {
       Accept: "application/json",
-      Authorization: ` Bearer ${accessToken}`,
+      Authorization: `Bearer ${accessToken}`,
     },
     ...options,
   });
